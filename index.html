@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centros de Estética - Guápiles</title>
+    <title>Estética y salón Siluetas - Guápiles</title>
     <style>
         * {
             margin: 0;
@@ -42,6 +42,35 @@
             font-weight: bold;
             color: #d4145a;
         }
+
+        .logo-img {
+            height: 42px;
+            width: auto;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .nav-menu li { position: relative; }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 120%;
+            left: 0;
+            background: white;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            list-style: none;
+            padding: 10px 0;
+            border-radius: 8px;
+            min-width: 200px;
+            z-index: 1100;
+        }
+
+        .submenu li { padding: 6px 18px; }
+
+        .submenu li a { color: #333; font-weight: 500; }
+
+        .nav-menu li:hover > .submenu { display: block; }
 
         .nav-menu {
             display: flex;
@@ -310,10 +339,10 @@
         .cta-button {
             display: inline-block;
             background: white;
-            color: #d4145a;
+            color: #d4145a !important;
             padding: 15px 40px;
             border-radius: 30px;
-            text-decoration: none;
+            text-decoration: none !important;
             font-weight: bold;
             font-size: 1.1em;
             margin-top: 20px;
@@ -323,23 +352,39 @@
         .cta-button:hover {
             transform: scale(1.05);
             box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            color: #d4145a !important;
+            text-decoration: none !important;
+        }
+
+        .cta-button:visited {
+            color: #d4145a !important;
+            text-decoration: none !important;
+        }
+
+        .cta-button:active {
+            color: #d4145a !important;
+            text-decoration: none !important;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">✨ Estética Guápiles</div>
-            <ul class="nav-menu">
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
+   <nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <img src="image/logo.jpg" alt="Logo Siluetas" class="logo-img">
+            <span>✨ Estética y salón Siluetas</span>
         </div>
-    </nav>
+        <ul class="nav-menu">
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </div>
+</nav>
+
 
     <header class="header">
-        <h1>✨ Estetista Lisbeth Sánchez ✨</h1>
-        <p>Tratamientos Faciales y Corporales de Alta Calidad</p>
+        <h1>✨ Estética y salón Siluetas ✨</h1>
+        <p>Brindamos Tratamientos de Estética corporal ,facial y capilar</p>
         <p>Tu belleza es nuestra pasión</p>
     </header>
 
@@ -462,7 +507,7 @@
                     </div>
 
                     <div class="package-card">
-                        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&q=80" alt="Levanta Colas" class="package-image">
+                        <img src=image/foto1.jpg alt="Levanta Colas" class="package-image">
                         <div class="package-content">
                             <div class="package-header">
                                 <h3 class="package-title">#7 Paquete Levanta Colas</h3>
@@ -479,6 +524,150 @@
                             <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20el%20Paquete%20Levanta%20Colas" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
                         </div>
                     </div>
+
+                    <div class="package-card">
+                        <img src="image/foto2.jpg" alt="Tratamiento Keratina" class="package-image">
+                        <div class="package-content">
+                            <div class="package-header">
+                                <h3 class="package-title">#8 Tratamiento de Keratina</h3>
+                                <span class="package-price">Consultar</span>
+                            </div>
+                            <ul class="package-features">
+                                <li>Alisado y brillo extremo</li>
+                                <li>Elimina el frizz</li>
+                                <li>Cabello suave y manejable</li>
+                                <li>Duración prolongada</li>
+                                <li>Protección térmica</li>
+                            </ul>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20Tratamiento%20de%20Keratina" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                        </div>
+                    </div>
+
+                    <div class="package-card">
+                        <img src="image/foto3.jpeg" alt="Botox Capilar" class="package-image">
+                        <div class="package-content">
+                            <div class="package-header">
+                                <h3 class="package-title">#9 Botox Capilar</h3>
+                                <span class="package-price">Consultar</span>
+                            </div>
+                            <ul class="package-features">
+                                <li>Reparación profunda</li>
+                                <li>Hidratación intensa</li>
+                                <li>Rellena fibras capilares</li>
+                                <li>Brillo y volumen</li>
+                                <li>Cabello rejuvenecido</li>
+                            </ul>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20Botox%20Capilar" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                        </div>
+                    </div>
+
+                    <div class="package-card">
+                        <img src="image/foto4.jpg" alt="Laminado de Cejas" class="package-image">
+                        <div class="package-content">
+                            <div class="package-header">
+                                <h3 class="package-title">#10 Laminado de Cejas</h3>
+                                <span class="package-price">Consultar</span>
+                            </div>
+                            <ul class="package-features">
+                                <li>Cejas perfectamente peinadas</li>
+                                <li>Efecto lifting</li>
+                                <li>Duración 6-8 semanas</li>
+                                <li>Look natural y definido</li>
+                                <li>Sin mantenimiento diario</li>
+                            </ul>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20Laminado%20de%20Cejas" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                        </div>
+                    </div>
+
+                    <div class="package-card">
+                        <img src="image/foto7.jpg" alt="Células Madre" class="package-image">
+                        <div class="package-content">
+                            <div class="package-header">
+                                <h3 class="package-title">#11 Tratamiento Células Madre</h3>
+                                <span class="package-price">Consultar</span>
+                            </div>
+                            <ul class="package-features">
+                                <li>Regeneración capilar avanzada</li>
+                                <li>Fortalece desde la raíz</li>
+                                <li>Previene caída del cabello</li>
+                                <li>Estimula crecimiento</li>
+                                <li>Tecnología de punta</li>
+                            </ul>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20Tratamiento%20C%C3%A9lulas%20Madre" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                        </div>
+                    </div>
+
+                    <div class="package-card">
+                        <img src="image/foto3.jpg" alt="Tinte de Cabello" class="package-image">
+                        <div class="package-content">
+                            <div class="package-header">
+                                <h3 class="package-title">#12 Tinte de Cabello</h3>
+                                <span class="package-price">Consultar</span>
+                            </div>
+                            <ul class="package-features">
+                                <li>Coloración profesional</li>
+                                <li>Amplia gama de colores</li>
+                                <li>Cobertura uniforme</li>
+                                <li>Productos de calidad</li>
+                                <li>Acabado brillante</li>
+                            </ul>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20Tinte%20de%20Cabello" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                        </div>
+                    </div>
+
+                    <div class="package-card">
+                        <img src="image/foto5.jpg" alt="Cubrimiento de Canas" class="package-image">
+                        <div class="package-content">
+                            <div class="package-header">
+                                <h3 class="package-title">#13 Cubrimiento de Canas</h3>
+                                <span class="package-price">Consultar</span>
+                            </div>
+                            <ul class="package-features">
+                                <li>Cobertura 100% de canas</li>
+                                <li>Color natural y duradero</li>
+                                <li>Sin daño al cabello</li>
+                                <li>Resultados inmediatos</li>
+                                <li>Look rejuvenecido</li>
+                            </ul>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20Cubrimiento%20de%20Canas" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                        </div>
+                    </div>
+
+                    <div class="package-card">
+                        <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=800&q=80" alt="Mechas" class="package-image">
+                        <div class="package-content">
+                            <div class="package-header">
+                                <h3 class="package-title">#14 Mechas</h3>
+                                <span class="package-price">Consultar</span>
+                            </div>
+                            <ul class="package-features">
+                                <li>Iluminación personalizada</li>
+                                <li>Técnicas modernas</li>
+                                <li>Balayage, babylights, highlights</li>
+                                <li>Efecto natural</li>
+                                <li>Dimensión y profundidad</li>
+                            </ul>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20Mechas" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                        </div>
+                    </div>
+
+                    <div class="package-card">
+                        <img src="image/foto6.jpg" alt="Lavado y Planchado" class="package-image">
+                        <div class="package-content">
+                            <div class="package-header">
+                                <h3 class="package-title">#15 Lavado y Planchado</h3>
+                                <span class="package-price">Consultar</span>
+                            </div>
+                            <ul class="package-features">
+                                <li>Lavado profesional</li>
+                                <li>Secado y planchado perfecto</li>
+                                <li>Productos premium</li>
+                                <li>Cabello liso y sedoso</li>
+                                <li>Acabado de salón</li>
+                            </ul>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20Lavado%20y%20Planchado" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -490,7 +679,7 @@
                 
                 <div class="contact-info">
                     <div class="contact-card">
-                        <h3>Estetista Lisbeth Sánchez</h3>
+                        <h3>Estética y salón Siluetas</h3>
                         <p>📍 Guápiles Coopervigua #3</p>
                         <p>Frente a Mueblería Jiménez</p>
                         <p>300mtrs oeste del Polideportivo</p>
@@ -505,7 +694,7 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2024 Estetista Lisbeth Sánchez - Guápiles. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Estética y salón Siluetas - Guápiles. Todos los derechos reservados.</p>
         <p>Tu belleza, nuestra pasión ✨</p>
     </footer>
 </body>
