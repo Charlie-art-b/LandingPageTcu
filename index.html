@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centros de Estética - Guápiles</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            padding-top: 70px;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #d4145a;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #d4145a;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #d4145a 0%, #fbb03b 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section {
+            margin: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2em;
+            color: #d4145a;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #d4145a, #fbb03b);
+        }
+
+        .business-section {
+            background: #fff;
+            padding: 40px 20px;
+        }
+
+        .business-section:nth-child(even) {
+            background: #fef5f9;
+        }
+
+        .business-name {
+            text-align: center;
+            font-size: 2em;
+            color: #d4145a;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .package-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(212, 20, 90, 0.3);
+        }
+
+        .package-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .package-content {
+            padding: 25px;
+        }
+
+        .package-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .package-title {
+            font-size: 1.4em;
+            color: #d4145a;
+            font-weight: bold;
+        }
+
+        .package-price {
+            background: linear-gradient(135deg, #d4145a, #ff6b9d);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .package-sessions {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .package-features {
+            list-style: none;
+        }
+
+        .package-features li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+        }
+
+        .package-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #d4145a;
+            font-weight: bold;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #d4145a 0%, #fbb03b 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            min-width: 280px;
+            transition: background 0.3s ease;
+        }
+
+        .contact-card:hover {
+            background: rgba(255,255,255,0.25);
+        }
+
+        .contact-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .contact-card p {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+
+        .whatsapp-icon {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .header p {
+                font-size: 1em;
+            }
+
+            .section-title {
+                font-size: 1.8em;
+            }
+
+            .business-name {
+                font-size: 1.6em;
+            }
+
+            .packages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .package-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 40px 15px;
+            }
+
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            .package-title {
+                font-size: 1.2em;
+            }
+
+            .package-price {
+                font-size: 1em;
+                padding: 8px 15px;
+            }
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #d4145a;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">✨ Estética Guápiles</div>
+            <ul class="nav-menu">
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="header">
+        <h1>✨ Estetista Lisbeth Sánchez ✨</h1>
+        <p>Tratamientos Faciales y Corporales de Alta Calidad</p>
+        <p>Tu belleza es nuestra pasión</p>
+    </header>
+
+    <main>
+        <!-- Services Section -->
+        <section class="business-section" id="servicios">
+            <div class="container">
+                <h2 class="business-name">Nuestros Servicios</h2>
+                
+                <div class="packages-grid">
+                    <div class="package-card">
+                        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80" alt="Limpieza Facial" class="package-image">
+                        <div class="package-content">
+                            <div class="package-header">
+                                <h3 class="package-title">#1 Paquete Facial</h3>
+                                <span class="package-price">₡20,000</span>
+                            </div>
+                            <ul class="package-features">
+                                <li>Limpieza Facial Reafirmante</li>
+                                <li>Radiofrecuencia</li>
+                                <li>Mascarilla de Colágeno</li>
+                                <li>Máscara de Luz Led</li>
+                                <li>Ampoli Reafirmante Facial con ultrasonido</li>
+                            </ul>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20el%20Paquete%20Facial%20%231" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                        </div>
+                    </div>
+
+                    <div class="package-card">
+                        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80" alt="Tratamiento Manchas" class="package-image">
+                        <div class="package-content">
+                            <div class="package-header">
+                                <h3 class="package-title">#2 Limpieza Facial</h3>
+                                <span class="package-price">₡20,000</span>
+                            </div>
+                            <ul class="package-features">
+                                <li>Tratamiento para Manchas</li>
+                                <li>Microdermoabrasión</li>
+                                <li>Máscara de Luz Led</li>
+                                <li>Mascarilla Aclarante de Manchas</li>
+                                <li>Ampolla Clarificante de Manchas</li>
+                            </ul>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20la%20Limpieza%20Facial%20%232" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                        </div>
+                    </div>
+
+                    <div class="package-card">
+                        <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=800&q=80" alt="Tratamiento Acné" class="package-image">
+                        <div class="package-content">
+                            <div class="package-header">
+                                <h3 class="package-title">#3 Limpieza Facial Acné</h3>
+                                <span class="package-price">₡20,000</span>
+                            </div>
+                            <ul class="package-features">
+                                <li>Tratamiento para Acné</li>
+                                <li>Extracción con Hidrofacial</li>
+                                <li>Alta Frecuencia</li>
+                                <li>Mascarilla Secativa</li>
+                                <li>Mascarilla de Extractos Vegetales</li>
+                                <li>Máscara de Luz Led</li>
+                            </ul>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20la%20Limpieza%20Facial%20Acn%C3%A9%20%233" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                        </div>
+                    </div>
+
+                    <div class="package-card">
+                        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&q=80" alt="Limpieza Facial Expresión" class="package-image">
+                        <div class="package-content">
+                            <div class="package-header">
+                                <h3 class="package-title">#4 Limpieza Facial</h3>
+                                <span class="package-price">₡20,000</span>
+                            </div>
+                            <ul class="package-features">
+                                <li>Nutrición Líneas e Expresión</li>
+                                <li>Alta Frecuencia</li>
+                                <li>Máscara de Luz Led</li>
+                                <li>Ultrasonido Facial</li>
+                                <li>Mesoterapia Virtual con Ampolla con Liposomas</li>
+                            </ul>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20la%20Limpieza%20Facial%20%234" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                        </div>
+                    </div>
+
+                    <div class="package-card">
+                        <img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=800&q=80" alt="Anticelulítico" class="package-image">
+                        <div class="package-content">
+                            <div class="package-header">
+                                <h3 class="package-title">#5 Paquete Anticelulítico</h3>
+                                <span class="package-price">₡50,000</span>
+                            </div>
+                            <p class="package-sessions">5 Sesiones</p>
+                            <ul class="package-features">
+                                <li>Exfoliación</li>
+                                <li>Vacunterapia</li>
+                                <li>Radiofrecuencia</li>
+                                <li>Láser Thera</li>
+                                <li>Masaje Anticelulítico</li>
+                            </ul>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20el%20Paquete%20Anticelul%C3%ADtico" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                        </div>
+                    </div>
+
+                    <div class="package-card">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80" alt="Reductivo" class="package-image">
+                        <div class="package-content">
+                            <div class="package-header">
+                                <h3 class="package-title">#6 Paquete Reductivo</h3>
+                                <span class="package-price">₡50,000</span>
+                            </div>
+                            <p class="package-sessions">5 Sesiones</p>
+                            <ul class="package-features">
+                                <li>Maderoterapia</li>
+                                <li>Lipoláser</li>
+                                <li>Láser Thera</li>
+                                <li>Cavitación</li>
+                                <li>Masaje Reductivo</li>
+                            </ul>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20el%20Paquete%20Reductivo" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                        </div>
+                    </div>
+
+                    <div class="package-card">
+                        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&q=80" alt="Levanta Colas" class="package-image">
+                        <div class="package-content">
+                            <div class="package-header">
+                                <h3 class="package-title">#7 Paquete Levanta Colas</h3>
+                                <span class="package-price">₡50,000</span>
+                            </div>
+                            <p class="package-sessions">5 Sesiones</p>
+                            <ul class="package-features">
+                                <li>Vacunterapia</li>
+                                <li>Gimnasia Pasiva</li>
+                                <li>Radio Frecuencia</li>
+                                <li>Gel Reafirmante</li>
+                                <li>Masaje con Gel Reafirmante</li>
+                            </ul>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20el%20Paquete%20Levanta%20Colas" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contacto">
+            <div class="container">
+                <h2 class="section-title" style="color: white;">📞 Información de Contacto</h2>
+                
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3>Estetista Lisbeth Sánchez</h3>
+                        <p>📍 Guápiles Coopervigua #3</p>
+                        <p>Frente a Mueblería Jiménez</p>
+                        <p>300mtrs oeste del Polideportivo</p>
+                        <p style="font-size: 1.3em; margin-top: 15px;">
+                            <strong>☎️ 8723-3930</strong>
+                        </p>
+                        <a href="https://wa.me/50687233930" class="cta-button">Contactar por WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Estetista Lisbeth Sánchez - Guápiles. Todos los derechos reservados.</p>
+        <p>Tu belleza, nuestra pasión ✨</p>
+    </footer>
+</body>
+</html>
