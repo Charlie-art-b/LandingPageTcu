@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +25,7 @@
             left: 0;
             right: 0;
             background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             z-index: 1000;
         }
 
@@ -50,7 +51,9 @@
             margin-right: 10px;
         }
 
-        .nav-menu li { position: relative; }
+        .nav-menu li {
+            position: relative;
+        }
 
         .submenu {
             display: none;
@@ -58,7 +61,7 @@
             top: 120%;
             left: 0;
             background: white;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
             list-style: none;
             padding: 10px 0;
             border-radius: 8px;
@@ -66,11 +69,18 @@
             z-index: 1100;
         }
 
-        .submenu li { padding: 6px 18px; }
+        .submenu li {
+            padding: 6px 18px;
+        }
 
-        .submenu li a { color: #333; font-weight: 500; }
+        .submenu li a {
+            color: #333;
+            font-weight: 500;
+        }
 
-        .nav-menu li:hover > .submenu { display: block; }
+        .nav-menu li:hover>.submenu {
+            display: block;
+        }
 
         .nav-menu {
             display: flex;
@@ -99,7 +109,7 @@
         .header h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .header p {
@@ -165,7 +175,7 @@
             background: white;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
@@ -247,7 +257,7 @@
         }
 
         .contact-card {
-            background: rgba(255,255,255,0.15);
+            background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(10px);
             padding: 30px;
             border-radius: 15px;
@@ -256,7 +266,7 @@
         }
 
         .contact-card:hover {
-            background: rgba(255,255,255,0.25);
+            background: rgba(255, 255, 255, 0.25);
         }
 
         .contact-card h3 {
@@ -336,6 +346,12 @@
             }
         }
 
+        .consultar-btn {
+            text-decoration: none;
+            /* QUITA la línea debajo */
+
+        }
+
         .cta-button {
             display: inline-block;
             background: white;
@@ -351,7 +367,7 @@
 
         .cta-button:hover {
             transform: scale(1.05);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
             color: #d4145a !important;
             text-decoration: none !important;
         }
@@ -367,19 +383,20 @@
         }
     </style>
 </head>
+
 <body>
-   <nav class="navbar">
-    <div class="nav-container">
-        <div class="nav-logo">
-            <img src="image/logo.jpg" alt="Logo Siluetas" class="logo-img">
-            <span>✨ Estética y salón Siluetas</span>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="image/logo.jpg" alt="Logo Siluetas" class="logo-img">
+                <span>✨ Estética y salón Siluetas</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
         </div>
-        <ul class="nav-menu">
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </div>
-</nav>
+    </nav>
 
 
     <header class="header">
@@ -393,10 +410,11 @@
         <section class="business-section" id="servicios">
             <div class="container">
                 <h2 class="business-name">Nuestros Servicios</h2>
-                
+
                 <div class="packages-grid">
                     <div class="package-card">
-                        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80" alt="Limpieza Facial" class="package-image">
+                        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80"
+                            alt="Limpieza Facial" class="package-image">
                         <div class="package-content">
                             <div class="package-header">
                                 <h3 class="package-title">#1 Paquete Facial</h3>
@@ -409,12 +427,14 @@
                                 <li>Máscara de Luz Led</li>
                                 <li>Ampoli Reafirmante Facial con ultrasonido</li>
                             </ul>
-                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20el%20Paquete%20Facial%20%231" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20el%20Paquete%20Facial%20%231"
+                                class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
                         </div>
                     </div>
 
                     <div class="package-card">
-                        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80" alt="Tratamiento Manchas" class="package-image">
+                        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80"
+                            alt="Tratamiento Manchas" class="package-image">
                         <div class="package-content">
                             <div class="package-header">
                                 <h3 class="package-title">#2 Limpieza Facial</h3>
@@ -427,12 +447,14 @@
                                 <li>Mascarilla Aclarante de Manchas</li>
                                 <li>Ampolla Clarificante de Manchas</li>
                             </ul>
-                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20la%20Limpieza%20Facial%20%232" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20la%20Limpieza%20Facial%20%232"
+                                class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
                         </div>
                     </div>
 
                     <div class="package-card">
-                        <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=800&q=80" alt="Tratamiento Acné" class="package-image">
+                        <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=800&q=80"
+                            alt="Tratamiento Acné" class="package-image">
                         <div class="package-content">
                             <div class="package-header">
                                 <h3 class="package-title">#3 Limpieza Facial Acné</h3>
@@ -446,12 +468,14 @@
                                 <li>Mascarilla de Extractos Vegetales</li>
                                 <li>Máscara de Luz Led</li>
                             </ul>
-                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20la%20Limpieza%20Facial%20Acn%C3%A9%20%233" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20la%20Limpieza%20Facial%20Acn%C3%A9%20%233"
+                                class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
                         </div>
                     </div>
 
                     <div class="package-card">
-                        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&q=80" alt="Limpieza Facial Expresión" class="package-image">
+                        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&q=80"
+                            alt="Limpieza Facial Expresión" class="package-image">
                         <div class="package-content">
                             <div class="package-header">
                                 <h3 class="package-title">#4 Limpieza Facial</h3>
@@ -464,12 +488,14 @@
                                 <li>Ultrasonido Facial</li>
                                 <li>Mesoterapia Virtual con Ampolla con Liposomas</li>
                             </ul>
-                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20la%20Limpieza%20Facial%20%234" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20la%20Limpieza%20Facial%20%234"
+                                class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
                         </div>
                     </div>
 
                     <div class="package-card">
-                        <img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=800&q=80" alt="Anticelulítico" class="package-image">
+                        <img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=800&q=80"
+                            alt="Anticelulítico" class="package-image">
                         <div class="package-content">
                             <div class="package-header">
                                 <h3 class="package-title">#5 Paquete Anticelulítico</h3>
@@ -483,12 +509,13 @@
                                 <li>Láser Thera</li>
                                 <li>Masaje Anticelulítico</li>
                             </ul>
-                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20el%20Paquete%20Anticelul%C3%ADtico" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20el%20Paquete%20Anticelul%C3%ADtico"
+                                class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
                         </div>
                     </div>
 
                     <div class="package-card">
-                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80" alt="Reductivo" class="package-image">
+                        <img src="image/logo.jpg" alt="Reductivo" class="package-image">
                         <div class="package-content">
                             <div class="package-header">
                                 <h3 class="package-title">#6 Paquete Reductivo</h3>
@@ -502,7 +529,8 @@
                                 <li>Cavitación</li>
                                 <li>Masaje Reductivo</li>
                             </ul>
-                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20el%20Paquete%20Reductivo" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20el%20Paquete%20Reductivo"
+                                class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
                         </div>
                     </div>
 
@@ -521,7 +549,8 @@
                                 <li>Gel Reafirmante</li>
                                 <li>Masaje con Gel Reafirmante</li>
                             </ul>
-                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20el%20Paquete%20Levanta%20Colas" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20el%20Paquete%20Levanta%20Colas"
+                                class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
                         </div>
                     </div>
 
@@ -530,7 +559,10 @@
                         <div class="package-content">
                             <div class="package-header">
                                 <h3 class="package-title">#8 Tratamiento de Keratina</h3>
-                                <span class="package-price">Consultar</span>
+                                <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20consultar%20sobre%20Mechas"
+                                    class="package-price consultar-btn">
+                                    Consultar
+                                </a>
                             </div>
                             <ul class="package-features">
                                 <li>Alisado y brillo extremo</li>
@@ -539,7 +571,8 @@
                                 <li>Duración prolongada</li>
                                 <li>Protección térmica</li>
                             </ul>
-                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20Tratamiento%20de%20Keratina" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20Tratamiento%20de%20Keratina"
+                                class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
                         </div>
                     </div>
 
@@ -548,7 +581,10 @@
                         <div class="package-content">
                             <div class="package-header">
                                 <h3 class="package-title">#9 Botox Capilar</h3>
-                                <span class="package-price">Consultar</span>
+                                <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20consultar%20sobre%20Mechas"
+                                    class="package-price consultar-btn">
+                                    Consultar
+                                </a>
                             </div>
                             <ul class="package-features">
                                 <li>Reparación profunda</li>
@@ -557,7 +593,8 @@
                                 <li>Brillo y volumen</li>
                                 <li>Cabello rejuvenecido</li>
                             </ul>
-                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20Botox%20Capilar" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20Botox%20Capilar"
+                                class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
                         </div>
                     </div>
 
@@ -566,7 +603,10 @@
                         <div class="package-content">
                             <div class="package-header">
                                 <h3 class="package-title">#10 Laminado de Cejas</h3>
-                                <span class="package-price">Consultar</span>
+                                <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20consultar%20sobre%20Mechas"
+                                    class="package-price consultar-btn">
+                                    Consultar
+                                </a>
                             </div>
                             <ul class="package-features">
                                 <li>Cejas perfectamente peinadas</li>
@@ -575,7 +615,8 @@
                                 <li>Look natural y definido</li>
                                 <li>Sin mantenimiento diario</li>
                             </ul>
-                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20Laminado%20de%20Cejas" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20Laminado%20de%20Cejas"
+                                class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
                         </div>
                     </div>
 
@@ -584,7 +625,10 @@
                         <div class="package-content">
                             <div class="package-header">
                                 <h3 class="package-title">#11 Tratamiento Células Madre</h3>
-                                <span class="package-price">Consultar</span>
+                                <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20consultar%20sobre%20Mechas"
+                                    class="package-price consultar-btn">
+                                    Consultar
+                                </a>
                             </div>
                             <ul class="package-features">
                                 <li>Regeneración capilar avanzada</li>
@@ -593,7 +637,8 @@
                                 <li>Estimula crecimiento</li>
                                 <li>Tecnología de punta</li>
                             </ul>
-                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20Tratamiento%20C%C3%A9lulas%20Madre" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20Tratamiento%20C%C3%A9lulas%20Madre"
+                                class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
                         </div>
                     </div>
 
@@ -611,7 +656,8 @@
                                 <li>Productos de calidad</li>
                                 <li>Acabado brillante</li>
                             </ul>
-                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20Tinte%20de%20Cabello" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20Tinte%20de%20Cabello"
+                                class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
                         </div>
                     </div>
 
@@ -620,7 +666,10 @@
                         <div class="package-content">
                             <div class="package-header">
                                 <h3 class="package-title">#13 Cubrimiento de Canas</h3>
-                                <span class="package-price">Consultar</span>
+                                <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20consultar%20sobre%20Mechas"
+                                    class="package-price consultar-btn">
+                                    Consultar
+                                </a>
                             </div>
                             <ul class="package-features">
                                 <li>Cobertura 100% de canas</li>
@@ -629,16 +678,21 @@
                                 <li>Resultados inmediatos</li>
                                 <li>Look rejuvenecido</li>
                             </ul>
-                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20Cubrimiento%20de%20Canas" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20Cubrimiento%20de%20Canas"
+                                class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
                         </div>
                     </div>
 
                     <div class="package-card">
-                        <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=800&q=80" alt="Mechas" class="package-image">
+                        <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=800&q=80" alt="Mechas"
+                            class="package-image">
                         <div class="package-content">
                             <div class="package-header">
                                 <h3 class="package-title">#14 Mechas</h3>
-                                <span class="package-price">Consultar</span>
+                                <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20consultar%20sobre%20Mechas"
+                                    class="package-price consultar-btn">
+                                    Consultar
+                                </a>
                             </div>
                             <ul class="package-features">
                                 <li>Iluminación personalizada</li>
@@ -647,7 +701,8 @@
                                 <li>Efecto natural</li>
                                 <li>Dimensión y profundidad</li>
                             </ul>
-                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20Mechas" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20Mechas"
+                                class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
                         </div>
                     </div>
 
@@ -656,7 +711,10 @@
                         <div class="package-content">
                             <div class="package-header">
                                 <h3 class="package-title">#15 Lavado y Planchado</h3>
-                                <span class="package-price">Consultar</span>
+                                <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20consultar%20sobre%20Mechas"
+                                    class="package-price consultar-btn">
+                                    Consultar
+                                </a>
                             </div>
                             <ul class="package-features">
                                 <li>Lavado profesional</li>
@@ -665,7 +723,8 @@
                                 <li>Cabello liso y sedoso</li>
                                 <li>Acabado de salón</li>
                             </ul>
-                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20Lavado%20y%20Planchado" class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
+                            <a href="https://wa.me/50687233930?text=Hola%2C%20quiero%20agendar%20Lavado%20y%20Planchado"
+                                class="whatsapp-btn">📱 Agendar vía WhatsApp</a>
                         </div>
                     </div>
                 </div>
@@ -676,7 +735,7 @@
         <section class="contact-section" id="contacto">
             <div class="container">
                 <h2 class="section-title" style="color: white;">📞 Información de Contacto</h2>
-                
+
                 <div class="contact-info">
                     <div class="contact-card">
                         <h3>Estética y salón Siluetas</h3>
@@ -698,4 +757,5 @@
         <p>Tu belleza, nuestra pasión ✨</p>
     </footer>
 </body>
+
 </html>
